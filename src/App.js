@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sphere from "./components/Sphere";
+import Sphere from "./components/Sphere/Sphere";
 import Details from "./components/Details/Details";
 
 import classes from "./App.module.scss";

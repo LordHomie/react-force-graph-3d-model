@@ -2,7 +2,7 @@
 
 .details {
   @include centerElements(flex-start, flex-start, column);
-  width: 100%;
+  width: 300px;
   font-size: 20px;
   align-self: flex-start;
   padding: 0px 5px;

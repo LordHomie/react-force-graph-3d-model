@@ -2,8 +2,9 @@
 
 import React, { useRef } from "react";
 import { ForceGraph3D } from "react-force-graph";
-import dataset from "../config/dataset";
-import { utilityGenRandomTree, utilityGetNodeDetatils } from "../utils";
+import useGetScreenDimensions from "./useGetScreenDimensions";
+import dataset from "../../config/dataset";
+import { utilityGenRandomTree, utilityGetNodeDetatils } from "../../utils";
 import {
   CSS2DObject,
   CSS2DRenderer,
@@ -11,6 +12,8 @@ import {
 
 const Sphere = ({ setClickDetails }) => {
   const graphRef = useRef();
+  const { screenWidth, screenHeight } = useGetScreenDimensions();
+
   const extraRenderers = [new CSS2DRenderer()];
   const data = utilityGenRandomTree(dataset);
   console.log(data);
@@ -22,8 +25,8 @@ const Sphere = ({ setClickDetails }) => {
 
   return (
     <ForceGraph3D
-      width={1600}
-      height={880}
+      width={screenWidth - 300}
+      height={screenHeight - 80}
       ref={graphRef}
       graphData={data}
       nodeAutoColorBy="group"
