@@ -1,0 +1,13 @@
+// A function for configuring flexbox
+@mixin centerElements($justify-content, $align-items, $direction) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $direction;
+}
+
+.remove-list-styles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

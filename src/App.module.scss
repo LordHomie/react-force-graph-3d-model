@@ -1,0 +1,16 @@
+@import "./styles/common.scss";
+
+.main {
+  @include centerElements(center, flex-start, column);
+  & .header {
+    display: inline-block;
+    align-self: center;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  & .body {
+    @include centerElements(space-between, center, row);
+    width: 100%;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../styles/common.scss";
+
+.details {
+  @include centerElements(flex-start, flex-start, column);
+  width: 100%;
+  font-size: 20px;
+  align-self: flex-start;
+  padding: 0px 5px;
+  box-sizing: border-box;
+  & span {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    word-break: break-word;
+    margin-bottom: 5px;
+    &:nth-child(1) {
+      margin-bottom: 30px;
+    }
+  }
+  & ul {
+    @extend .remove-list-styles;
+    & li {
+      margin-bottom: 5px;
+    }
+  }
+  & .value {
+    color: white;
+  }
+}
